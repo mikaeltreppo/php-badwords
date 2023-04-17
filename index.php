@@ -11,7 +11,8 @@
 
     <form method="GET" action="frase.php" >
 
-        <input id="frase" name="frase" type="text" placeholder="inserisci la frase da controllare"/>
+        <input id="frase" name="frase" type="text" placeholder="frase da controllare"/>
+        <input type="text" id="censura" name=" censura" placeholder="parola da censurare">
 
         <button type="submit">Invia</button>
     </form>

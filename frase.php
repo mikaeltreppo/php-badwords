@@ -1,6 +1,8 @@
 <?php
 
 $frasi = $_GET['frase'];
+$censura= $_GET['censura'];
+$censurato = str_replace($censura, "***", $frasi);
  ?>
 
 
@@ -14,14 +16,24 @@ $frasi = $_GET['frase'];
     <title>Document</title>
 </head>
 <body>
-    <h1>
-        <?php 
+    <h1> La frase senza censura è:
+        <?php
         echo  $frasi; 
          ?>
     </h1>
-    
+
     <span>La lunghezza della stringa è di: <?php 
       echo strlen($frasi);
+     ?> caratteri
+     </span>
+     
+     <h2>La frase con censure è: 
+        <?php
+           echo $censurato;
+         ?>
+     </h2>
+     <span>La lunghezza della stringa è di: <?php 
+      echo strlen($censurato);
      ?> caratteri
      </span>
 </body>
